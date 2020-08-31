@@ -1,0 +1,77 @@
+<body class="image-bg">
+
+        <img class="position-icon" src="assets/imagenSimon.png" />
+        <button id="verde " class="boton-ghost" (click)="reproducirSonido(3)"><img [ngClass]="{'bigger':verde}"
+                class="position-green responsive fluid" src="assets/verde.png" /></button>
+        <button id="azul " class="boton-ghost" (click)="reproducirSonido(2)"><img [ngClass]="{'bigger':azul}"
+                class="position-blue responsive fluid" src="assets/azul.png" /></button>
+        <button id="rojo" class="boton-ghost" (click)="reproducirSonido(1)"><img [ngClass]="{'bigger':rojo}" class="position-red"
+                src="assets/rojo.png" /></button>
+        <button id="amarillo" class="boton-ghost" (click)="reproducirSonido(4)"><img [ngClass]="{'bigger':amarillo}" class="position-yellow"
+                src="assets/amarillo.png" /></button>
+       
+  
+    
+    <div class="position-level">LEVEL {{this.level}} </div>
+    <div class="valores">
+        <h1 class="numeros">{{trys}} Trys</h1>
+        <h1 class="numeros">Score {{this.totalScore}} </h1>
+     </div>   
+      <br>
+        <button *ngIf='disable()' type="button" (click)="comenzar()" class="btn btn-primary btn-lg">Go</button>
+
+        <div *ngIf='finsecuencia'>
+                <div class="modal-dialog  animated fadeInDown">
+                        <div class="modal-content background-modal-i image-bg">
+                            
+                            <div>
+                               
+                                <img src="./assets/imagenStart.png">
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+            </div>
+         <div *ngIf='inicioInstrucciones'>
+                <div class="modal-dialog  animated fadeInDown">
+                        <div class="modal-content background-modal-i image-bg">
+                            
+                            <div>
+                               
+                                <img src="./assets/avisoStart.png">
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+        </div>
+        <div *ngIf='fail'>
+                <div class="modal-dialog  animated fadeInDown">
+                        <div class="modal-content background-modal-i image-bg">
+                            
+                            <div>
+                               
+                                <img src="./assets/falloAviso.png">
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+        </div>
+    
+    <div *ngIf='FinalJuego()'>
+            <div class="modal-dialog modal-position animated fadeInDown">
+                    <div class="modal-content background-modal image-bg">
+                        
+                        <div>
+                            <img class="image" src="./assets/imagenSimon.png">
+                            <h1>FINAL SCORE : {{this.totalScore}}</h1>
+                            <h2 class=" text-format">END GAME</h2>
+                            <p class=" text-format">PLEASE TRY AGAIN </p>
+                        </div>
+                       
+                    </div>
+                </div>
+        </div>
+</body>

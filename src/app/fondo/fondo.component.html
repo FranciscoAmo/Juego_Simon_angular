@@ -1,0 +1,29 @@
+<body class="image-bg">
+    <img class="image-title animated fadeInDown " src="./assets/titulo.png">
+    <a href="#entradaModal" data-toggle="modal"><img class="position-icon animated fadeInUp" src="assets/imagenSimon.png" /></a>
+
+    <div id="entradaModal" class="modal fade position-modal size-modal">
+        <div class="modal-dialog ">
+            <div class="modal-content background-modal image-bg">
+                <div class="modal-header">
+                    <img class="image" src="./assets/imagenSimon.png">
+                </div>
+                <div>
+                    <h5 class=" text-format">Simon Challenge</h5>
+                    <p class=" text-format">Try to memorize the patterns</p>
+                </div>
+                <div>
+                    <a routerLink="juego" class="go" (click)="muteF()">
+                        <input type=image class="buttons " src="./assets/btnInicio.gif" width="25" height="15" data-dismiss="modal">
+                    </a>
+                    <a routerLink="Score" class="go" (click)="muteF()">
+                        <input type=image class="buttons " src="./assets/btnScore.gif" width="25" height="15" data-dismiss="modal">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Creado por Francisco Amo</p>
+    </footer>
+</body>
